@@ -1,11 +1,41 @@
 /* THIS FILE TELLS YOU THE BASIC ALGORITHM OF SORTING*/
 
 #include<stdio.h>
+void swap(*a,*b)
+{
+	int c=*a;
+	*a=*b;
+	*b=c;
+}
+
+
 int main()
 
 {
   printf("Hello! This file is about the basic alogorithms that are followed during writing a program for sorting a given array of numbers.\n");
   printf("So you basically first decide an order for sorting the elements in the array then follow these steps:\n");
+
+  //starting the program
+
+  int ar[20],n,i,j;
+	printf("Enter size of array:");
+	scanf("%d",&n);
+	printf("Enter the array:\n");
+	for(i=0;i<n;i++)
+		scanf("%d",&ar[i]);
+
+	for(i=0;i<n-1;i++)
+	{
+		for(j=0;j<n-i-1;j++)
+	    {
+	    	if(ar[j]>ar[j+1])
+	    		swap(&ar[j],&ar[j+1]);
+	    }
+	}
+
+	for(i=0;i<n;i++)
+		printf("Sorted array is: %d ",ar[i]);
+
   
   return 0;
 }
