@@ -1,0 +1,11 @@
+/* THIS FILE TELLS YOU THE BASIC ALGORITHM OF SORTING*/
+
+#include<stdio.h>
+int main()
+
+{
+  printf("Hello! This file is about the basic alogorithms that are followed during writing a program for sorting a given array of numbers.\n");
+  printf("So you basically first decide an order for sorting the elements in the array then follow these steps:\n");
+  
+  return 0;
+}
